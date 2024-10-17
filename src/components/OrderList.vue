@@ -51,20 +51,24 @@
           class="mt-1 border-gray-300 rounded-lg shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500"
           placeholder="Min value" />
       </div>
-    <!-- Freight Min -->
-    <div class="flex-1 min-w-[150px]">
+
+      <!-- Freight Max -->
+      <div class="flex-1 min-w-[150px]">
         <label for="freight-max" class="block text-sm font-medium text-gray-700">Freight Max</label>
         <input type="number" id="freight-max" v-model="filters.freightMax"
           class="mt-1 border-gray-300 rounded-lg shadow-sm p-3 focus:ring-indigo-500 focus:border-indigo-500"
           placeholder="Max value" />
       </div>
 
+      <!-- Ship Country Dropdown -->
       <div class="flex-1 min-w-[150px]">
-        <button @click="toggleCountryDropdown" class="bg-white text-[#415465] py-2 px-4 rounded-lg border border-gray-300 font-medium cursor-pointer">
+        <button @click="toggleCountryDropdown"
+          class="bg-white text-[#415465] py-2 px-4 rounded-lg border border-gray-300 font-medium cursor-pointer">
           Filtre Ekle - Ship Country
         </button>
         <div v-if="showCountryDropdown" class="absolute bg-white border border-gray-300 shadow-md rounded-lg p-3 w-64">
-          <input type="text" placeholder="Ara..." v-model="countrySearch" class="w-full p-2 border border-gray-300 rounded-md mb-2" />
+          <input type="text" placeholder="Ara..." v-model="countrySearch"
+            class="w-full p-2 border border-gray-300 rounded-md mb-2" />
           <div class="max-h-60 overflow-y-auto">
             <div v-for="country in filteredCountries" :key="country">
               <label class="flex items-center">
@@ -75,13 +79,16 @@
           </div>
         </div>
       </div>
-
+      
+      <!-- Ship Country Dropdown -->
       <div class="flex-1 min-w-[150px]">
-        <button @click="toggleCityDropdown" class="bg-white text-[#415465] py-2 px-4 rounded-lg border border-gray-300 font-medium cursor-pointer">
+        <button @click="toggleCityDropdown"
+          class="bg-white text-[#415465] py-2 px-4 rounded-lg border border-gray-300 font-medium cursor-pointer">
           Filtre Ekle - Ship City
         </button>
         <div v-if="showCityDropdown" class="absolute bg-white border border-gray-300 shadow-md rounded-lg p-3 w-64">
-          <input type="text" placeholder="Ara..." v-model="citySearch" class="w-full p-2 border border-gray-300 rounded-md mb-2" />
+          <input type="text" placeholder="Ara..." v-model="citySearch"
+            class="w-full p-2 border border-gray-300 rounded-md mb-2" />
           <div class="max-h-60 overflow-y-auto">
             <div v-for="city in filteredCities" :key="city">
               <label class="flex items-center">
